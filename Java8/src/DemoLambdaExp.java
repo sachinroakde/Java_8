@@ -1,8 +1,8 @@
 interface Exp
 {
-	//void display();
+
 	void display(int a);
-	//System.
+
 }
 public class DemoLambdaExp 
 {
