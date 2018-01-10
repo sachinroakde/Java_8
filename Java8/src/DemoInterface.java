@@ -18,10 +18,29 @@ interface i1
 	{
 		System.out.println(""+(a-b));
 	}
+	public default void show()
+	{
+		System.out.println("I");
+	}
 	
-	public void mul(int a,int b);
+	//public void mul(int a,int b);
 	
 }
+class B
+{
+	public  void show()
+	{
+		System.out.println("B");
+	}
+}
+class A extends B implements i1
+{
+	public  void show()
+	{
+		System.out.println("A");
+	}
+}
+
 public  class DemoInterface implements i1
 {
 
@@ -32,10 +51,12 @@ public  class DemoInterface implements i1
 	}
 	public static void main(String[] args) 
 	{
-		DemoInterface i=new DemoInterface();
-		i.sub(10,5);
+		A a=new A();
+		a.show();
+		DemoInterface i;//=new DemoInterface();
+		//i.sub(10,5);
 		i1.add(10,5);
-		i.mul(10,5);
+		//i.mul(10,5);
 	}
 
 }
